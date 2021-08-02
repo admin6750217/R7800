@@ -13,6 +13,12 @@
 # Modify default IP
  sed -i 's/192.168.1.1/192.168.8.1/g' package/base-files/files/bin/config_generate
 
+# cpufreq
+svn co https://github.com/immortalwrt/luci/tree/master/applications/luci-app-cpufreq feeds/luci/applications/luci-app-cpufreq
+ln -sf ../../../feeds/luci/applications/luci-app-cpufreq ./package/feeds/luci/luci-app-cpufreq
+
+
+
 # themes添加
 #git clone https://github.com/Leo-Jo-My/luci-theme-Butterfly package/luci-theme-Butterfly
 #git clone https://github.com/Leo-Jo-My/luci-theme-Butterfly-dark package/luci-theme-Butterfly-dark
