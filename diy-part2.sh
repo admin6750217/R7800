@@ -11,12 +11,7 @@
 #
 
 # Modify default IP
- sed -i 's/192.168.1.1/192.168.8.1/g' package/base-files/files/bin/config_generate
-
-# cpufreq
-svn co https://github.com/immortalwrt/luci/tree/master/applications/luci-app-cpufreq feeds/luci/applications/luci-app-cpufreq
-ln -sf ../../../feeds/luci/applications/luci-app-cpufreq ./package/feeds/luci/luci-app-cpufreq
-
+ sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
 
 # themes添加
@@ -41,7 +36,7 @@ git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/luci-th
 #sed -i 's/or "1"%>/or "1"%> ( <%=luci.sys.exec("expr `cat \/sys\/class\/thermal\/thermal_zone0\/temp` \/ 1000") or "?"%> \&#8451; ) /g' feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
 
 #添加额外非必须软件包
-#git clone https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
+git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 #git clone https://github.com/garypang13/luci-app-bypass package/luci-app-bypass
 git clone https://github.com/vernesong/OpenClash.git package/OpenClash
 
